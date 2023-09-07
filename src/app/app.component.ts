@@ -44,7 +44,10 @@ export class AppComponent implements OnInit{
 
   registrarContacto(): void {
     this.contactoService.registrarContacto(this.contactoForm.value).subscribe(
-      (result: any) => {}, 
+      (result: any) => {
+        console.log('Llamando a los getcontactos');
+        this.getContactos();
+      }, 
       (err: any) => {
         Swal.close();
         Swal.fire({
@@ -54,7 +57,7 @@ export class AppComponent implements OnInit{
         });
       }
     );
-    console.log('Llamando a los getcontactos');
-    this.getContactos();
+    //console.log('Llamando a los getcontactos');
+    //this.getContactos();
   }
 }

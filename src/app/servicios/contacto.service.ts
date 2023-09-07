@@ -9,7 +9,8 @@ import { Observable } from "rxjs";
 })
 
 export class Contactoservicio{
-    readonly BASE_URL: string='http://137.184.120.127:5000'
+    //readonly BASE_URL: string='http://137.184.120.127:5000'
+    readonly BASE_URL: string='http://localhost:8080'
     constructor(private http: HttpClient){
 
     }
