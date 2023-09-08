@@ -45,8 +45,10 @@ export class AppComponent implements OnInit{
   registrarContacto(): void {
     this.contactoService.registrarContacto(this.contactoForm.value).subscribe(
       (result: any) => {
+        //SIMILAR AL FINALLY EN JAVA
         console.log('Llamando a los getcontactos');
         this.getContactos();
+        //LLAMA  A LOS CONTACTOS POR CADA VEZ QUE SE USE EL REGISTRO
       }, 
       (err: any) => {
         Swal.close();
